@@ -1,0 +1,9 @@
+What we're specifically building
+Spot Bitcoin (and eventually a few other liquid coins — ETH, SOL maybe) on hourly or daily timeframes, using Binance data via ccxt. Paper-traded, not real money. Backtested honestly with walk-forward validation. Metrics computed from scratch so you understand what they mean.
+Timeframe choice matters: we're doing hourly/daily, not minute or tick data. Reasons — higher timeframes are more forgiving of infrastructure weakness, fees eat you alive on low timeframes, and strategies on hourly/daily timescales are where your math and reasoning matter more than your latency. High-frequency is a different sport you don't want to play as a solo beginner.
+
+What we are not doing
+Not touching leverage or futures yet. Spot only. Leverage adds complexity (funding rates, liquidation risk) that'll distract from the core learning.
+Not touching DeFi/on-chain trading yet. That's a valid extension for later. For now, centralized exchange data because it's clean and easy.
+Not using real money for at least 6 weeks. This is non-negotiable. The goal is building an honest backtest and paper-trading system. Real money before you trust your backtest is how people blow up accounts.
+Not trying to find a profitable strategy. We're trying to build the measurement system that would tell you if a strategy is profitable. This is the subtle part most beginners skip.
