@@ -4,7 +4,7 @@ import pandas as pd
 exchange = ccxt.binance()
 
 def get_data() :
-    ohlcv = exchange.fetch_ohlcv('BTC/USDT', timeframe='1m')
+    ohlcv = exchange.fetch_ohlcv('BTC/USDT', timeframe='1d')
     df = pd.DataFrame(ohlcv)
     df.columns = ["timestamp" , "open" , "high" , "low" , "close" , "volume"] 
     df['datetime'] = pd.to_datetime(df['timestamp'], unit='ms')
