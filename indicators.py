@@ -6,7 +6,7 @@ def smoothing(series , period) :
     return series.rolling(period).mean()
 
 def wilder_ema(series , period) :
-    # mathces Tradingview style
+    # matches Tradingview style
     alpha = 2 / (period + 1)
     sma = series.rolling(period).mean()
     ema = series.copy().astype(float)
